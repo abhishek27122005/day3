@@ -1,0 +1,43 @@
+# Function for Addition
+def add(x, y):
+    return x + y
+
+# Function for Subtraction
+def subtract(x, y):
+    return x - y
+
+# Function for Multiplication
+def multiply(x, y):
+    return x * y
+
+# Function for Division
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Cannot divide by zero"
+
+# Main Calculator
+def calculator():
+    print("Select operation: +  -  *  /")
+    choice = input("Enter operator: ")
+
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    # Call appropriate function based on operator
+    if choice == '+':
+        result = add(num1, num2)
+    elif choice == '-':
+        result = subtract(num1, num2)
+    elif choice == '*':
+        result = multiply(num1, num2)
+    elif choice == '/':
+        result = divide(num1, num2)
+    else:
+        result = "Invalid operator"
+
+    print("Result:", result)
+
+# Call the calculator function
+calculator()
